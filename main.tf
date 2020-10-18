@@ -1,12 +1,12 @@
 resource "google_compute_instance" "node-svc-01" {
   name         = "node-svc-01"
   machine_type = "f1-micro"
-  zone         = "us-central1-c"
+  zone         = "us-central1-b"
 
   # boot disk specifications
   boot_disk {
     initialize_params {
-      image = "node-svc-base" // use image built with Packer
+      image = "node-svc-base-181800910-000010" // use image built with Packer
     }
   }
 
