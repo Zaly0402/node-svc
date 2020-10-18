@@ -2,9 +2,10 @@
 set -e  # exit immediately if anything returns non-zero. See https://www.javatpoint.com/linux-set-command
 
 echo "  ----- install node, npm, git -----  "
-#apt-get install dialog apt-utils -y
 apt-get update -y
-apt-get install -y nodejs npm 
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+npm install npm --global 
 
 # we are also going to install python for using ansible later
 apt-get install -y python

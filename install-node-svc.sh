@@ -13,6 +13,6 @@ rsh ${NODE_IP_01} -l node-user 'mkdir -p ~/node-svc' # make application director
 scp -r server.js node-user@${NODE_IP_01}:~/node-svc/ # copy server script
 scp -r package.json node-user@${NODE_IP_01}:~/node-svc/ # copy Node packages
 rsh ${NODE_IP_01} -l node-user 'cd ~/node-svc && npm install' # install app
-rsh ${NODE_IP_01} -l node-user 'sudo nodejs ~/node-svc/server.js'  # run app 
+rsh ${NODE_IP_01} -l node-user 'sudo node ~/node-svc/server.js'  # run app 
 
 
